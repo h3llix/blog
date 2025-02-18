@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"52e4c8de70a9f8d8","x":-306,"y":524,"width":250,"height":60,"type":"text","text":"Vizier \nData Plane \nsrc/vizier"},
+		{"id":"a9ef3239c251021b","x":480,"y":522,"width":250,"height":60,"type":"text","text":"CLI "},
+		{"id":"f212d75908857fb5","x":68,"y":524,"width":250,"height":60,"type":"text","text":"Pixie Cloud\nManages Vizier"},
+		{"id":"c868b9343749b22e","x":40,"y":60,"width":250,"height":60,"type":"text","text":"Pixie"}
+	],
+	"edges":[
+		{"id":"dc0d9ee23f683e44","fromNode":"c868b9343749b22e","fromSide":"bottom","toNode":"52e4c8de70a9f8d8","toSide":"top"},
+		{"id":"6fa618f549ce577f","fromNode":"c868b9343749b22e","fromSide":"bottom","toNode":"f212d75908857fb5","toSide":"top"},
+		{"id":"d466817835074aa1","fromNode":"c868b9343749b22e","fromSide":"bottom","toNode":"a9ef3239c251021b","toSide":"top"}
+	]
+}
