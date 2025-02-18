@@ -1,3 +1,4 @@
+
 ---
 longform:
   format: scenes
@@ -5,8 +6,9 @@ longform:
   workflow: Default Workflow
   sceneFolder: /
   scenes:
-    - Obsidian Setup With Quartz
+    - Obsidian Quartz
   sceneTemplate: templates/Chapter.md
   ignoredFiles: []
 ---
+
 
