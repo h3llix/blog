@@ -60,8 +60,8 @@ npx quartz sync
 		- 185.199.111.153
 - Then, create a CNAME record for your subdomain pointing to `<username>.github.io`.
 
-![[Public/images/Pasted image 20250218202417.png]]
 
-![[Public/images/Pasted image 20250218202241.png]]
 
-![[Public/images/Pasted image 20250218202255.png]]
+![[images/Pasted image 20250218202255.png]]
+![[images/Pasted image 20250218202241.png]]
+![[images/Pasted image 20250218202417.png]]
