@@ -1,14 +1,10 @@
-
 ---
 longform:
   format: scenes
-  title: "h3llix writes! "
+  title: h3llix writes!
   workflow: Default Workflow
   sceneFolder: /
   scenes:
-    - Obsidian Quartz
-  sceneTemplate: templates/Chapter.md
+    - Setting Up My Knowledge Garden on Github Pages
   ignoredFiles: []
 ---
-
-
