@@ -1,5 +1,5 @@
 ---
-title: Obsidian Quartz
+title: Setting Up My Knowledge Garden on Github Pages
 draft: false
 tags:
   - obsidian
