@@ -1,6 +1,5 @@
 ---
-title: Welcome to Quartz
+title: Welcome to h3llix writes!
 ---
 
-This is a blank Quartz installation.
-	See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+This is my space to write, experiment, and learn. Some of my posts might be thoughtful, others might be random—but all of them are part of the process! 
