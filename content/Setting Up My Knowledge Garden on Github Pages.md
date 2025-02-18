@@ -5,7 +5,7 @@ tags:
   - obsidian
   - quartz
 ---
-I have started to use Obsidian as my primary notes taking tool and to maintain my knowledge base. I use Quartz with Obsidian to publish this website on [[Github Pages]]
+I have started to use Obsidian as my primary notes taking tool and to maintain my knowledge base. I use Quartz with Obsidian to publish this website on Github Pages
 Here's a quick quide on how do I set it up.
 
 ### Install Quartz 
