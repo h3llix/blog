@@ -2,6 +2,59 @@
 
 In this guide, I'll walk you through my setup for a complete home media server environment using Docker containers, Nginx as a reverse proxy, and Tailscale for secure remote access. This configuration allows me to host Jellyfin for media streaming, Sonarr/Radarr for content management, and even Immich for photo management—all accessible via custom domain names from anywhere.
 
+
+```mermaid
+flowchart TD
+    subgraph Host["Proxmox or Debian 12"]
+        Nginx["Nginx\nReverse Proxy"]
+    end
+
+    subgraph UserInterface["User Interface"]
+        Jellyseerr["Jellyseerr"]
+    end
+
+    subgraph MediaManagement["Media Management"]
+        Sonarr["Sonarr"]
+        Radarr["Radarr"]
+    end
+
+    subgraph Indexers["Indexers"]
+        Prowlarr["Prowlarr"]
+        Jackett["Jackett"]
+    end
+
+    subgraph MediaServer["Media Server"]
+        Jellyfin["Jellyfin"]
+    end
+
+    subgraph PhotoManagement["Photo Management"]
+        Immich["Immich"]
+    end
+
+    %% Domain connections
+    Nginx --> |"jellyseerr.h3llix.com"| Jellyseerr
+    Nginx --> |"sonarr.h3llix.com"| Sonarr
+    Nginx --> |"radarr.h3llix.com"| Radarr
+    Nginx --> |"prowlarr.h3llix.com"| Prowlarr
+    Nginx --> |"jellyfin.h3llix.com"| Jellyfin
+    Nginx --> |"photos.h3llix.com"| Immich
+
+    %% Style definitions
+    classDef proxy fill:#f5f5f5,stroke:#333,stroke-width:2px
+    classDef ui fill:#ffc0cb,stroke:#333,stroke-width:2px
+    classDef manager fill:#ffd700,stroke:#333,stroke-width:2px
+    classDef indexer fill:#ffa07a,stroke:#333,stroke-width:2px
+    classDef mediaServer fill:#98fb98,stroke:#333,stroke-width:2px
+    classDef photo fill:#afeeee,stroke:#333,stroke-width:2px
+
+    %% Apply styles
+    class Nginx proxy
+    class Jellyseerr ui
+    class Sonarr,Radarr manager
+    class Prowlarr,Jackett indexer
+    class Jellyfin mediaServer
+    class Immich photo
+```
 ## Components of My Setup
 
 My media server stack includes:
