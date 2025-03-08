@@ -1,43 +1,52 @@
 ## Introduction 
 
 In this guide, I'll walk you through my setup for a complete home media server environment using Docker containers, Nginx as a reverse proxy, and Tailscale for secure remote access. This configuration allows me to host Jellyfin for media streaming, Sonarr/Radarr for content management, and even Immich for photo management—all accessible via custom domain names from anywhere.
-
-
 ```mermaid
-flowchart TD
-    subgraph Host["My Server"]
-        Nginx["Nginx"]
+flowchart LR
+    %% Define nodes first
+    Nginx["Nginx"]
+    Jellyseerr["Jellyseerr"]
+    Sonarr["Sonarr"]
+    Radarr["Radarr"]
+    Prowlarr["Prowlarr"]
+    Jackett["Jackett"]
+    Jellyfin["Jellyfin"]
+    Immich["Immich"]
+
+    %% Define subgraphs
+    subgraph Host
+        Nginx
     end
 
-    subgraph UserInterface["User Interface"]
-        Jellyseerr["Jellyseerr"]
+    subgraph UserInterface
+        Jellyseerr
     end
 
-    subgraph MediaManagement["Media Management"]
-        Sonarr["Sonarr"]
-        Radarr["Radarr"]
+    subgraph MediaManagement
+        Sonarr
+        Radarr
     end
 
-    subgraph Indexers["Indexers"]
-        Prowlarr["Prowlarr"]
-        Jackett["Jackett"]
+    subgraph Indexers
+        Prowlarr
+        Jackett
     end
 
-    subgraph MediaServer["Media Server"]
-        Jellyfin["Jellyfin"]
+    subgraph MediaServer
+        Jellyfin
     end
 
-    subgraph PhotoManagement["Photo Management"]
-        Immich["Immich"]
+    subgraph PhotoManagement
+        Immich
     end
 
     %% Domain connections
-    Nginx --> |"jellyseerr.h3llix.com"| Jellyseerr
-    Nginx --> |"sonarr.h3llix.com"| Sonarr
-    Nginx --> |"radarr.h3llix.com"| Radarr
-    Nginx --> |"prowlarr.h3llix.com"| Prowlarr
-    Nginx --> |"jellyfin.h3llix.com"| Jellyfin
-    Nginx --> |"photos.h3llix.com"| Immich
+    Nginx -->|"jellyseerr.h3llix.com"| Jellyseerr
+    Nginx -->|"sonarr.h3llix.com"| Sonarr
+    Nginx -->|"radarr.h3llix.com"| Radarr
+    Nginx -->|"prowlarr.h3llix.com"| Prowlarr
+    Nginx -->|"jellyfin.h3llix.com"| Jellyfin
+    Nginx -->|"photos.h3llix.com"| Immich
 
     %% Style definitions
     classDef proxy fill:#f5f5f5,stroke:#333,stroke-width:2px
@@ -54,6 +63,7 @@ flowchart TD
     class Prowlarr,Jackett indexer
     class Jellyfin mediaServer
     class Immich photo
+
 ```
 ## Components of My Setup
 
