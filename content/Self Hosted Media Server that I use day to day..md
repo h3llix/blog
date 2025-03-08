@@ -5,8 +5,8 @@ In this guide, I'll walk you through my setup for a complete home media server e
 
 ```mermaid
 flowchart TD
-    subgraph Host["Proxmox or Debian 12"]
-        Nginx["Nginx\nReverse Proxy"]
+    subgraph Host["My Server"]
+        Nginx["Nginx"]
     end
 
     subgraph UserInterface["User Interface"]
